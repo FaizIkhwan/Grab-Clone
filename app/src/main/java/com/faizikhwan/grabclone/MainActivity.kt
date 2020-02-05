@@ -41,8 +41,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        rv_data.layoutManager = gridLayoutManager
-        rv_data.setHasFixedSize(true)
-        rv_data.adapter = adsAdapter
+        rv_data_ads.layoutManager = gridLayoutManager
+        rv_data_ads.setHasFixedSize(true)
+        rv_data_ads.adapter = adsAdapter
     }
 }
