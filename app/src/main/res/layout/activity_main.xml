@@ -22,9 +22,9 @@
             android:orientation="horizontal"
             android:weightSum="2"
             app:layout_constraintTop_toBottomOf="@+id/action_bar_custom"
-            app:layout_constraintBottom_toTopOf="@+id/rv_data_ads"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent">
+            app:layout_constraintBottom_toTopOf="@+id/layout_grid_menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <include
                 layout="@layout/menu_linear_layout" />
@@ -34,6 +34,77 @@
 
         </LinearLayout>
 
+        <GridLayout
+            android:id="@+id/layout_grid_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:rowCount="2"
+            android:columnCount="4"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_menu"
+            app:layout_constraintBottom_toTopOf="@+id/rv_data_ads">
+
+            <include
+                layout="@layout/menu_grid_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal" />
+
+            <include
+                layout="@layout/menu_grid_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"/>
+
+            <include
+                layout="@layout/menu_grid_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"/>
+
+            <include
+                layout="@layout/menu_grid_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal" />
+
+            <include
+                layout="@layout/menu_grid_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"/>
+
+            <include
+                layout="@layout/menu_grid_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"/>
+
+            <include
+                layout="@layout/menu_grid_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"/>
+
+            <include
+                layout="@layout/menu_grid_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"/>
+
+        </GridLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_data_ads"
             android:layout_width="match_parent"
@@ -41,7 +112,8 @@
             android:layout_marginTop="10dp"
             android:padding="10dp"
             android:background="@android:color/white"
-            app:layout_constraintTop_toBottomOf="@+id/layout_menu"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintTop_toBottomOf="@+id/layout_grid_menu"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent" />
